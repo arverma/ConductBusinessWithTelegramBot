@@ -36,9 +36,3 @@ class TelegramChatbot:
         files = {'photo': open(self.UPI_QR_FILE_NAME, 'rb')}
         requests.post(url, files=files)
 
-    @staticmethod
-    def read_token_from_config_file(config):
-        parser = config.ConfigParser()
-        parser.read(config)
-        return parser.get('creds', 'token')
-
